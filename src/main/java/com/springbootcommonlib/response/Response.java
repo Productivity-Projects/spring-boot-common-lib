@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @JsonInclude(value = Include.NON_NULL)
-public class CommonConstants {
+public class Response {
 
 	Object data;
 	Integer count;
