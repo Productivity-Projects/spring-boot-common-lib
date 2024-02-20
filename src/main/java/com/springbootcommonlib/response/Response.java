@@ -13,4 +13,5 @@ public class Response {
 	Integer count;
 	String details;
 	String errorMessage;
+	Boolean status;
 }
