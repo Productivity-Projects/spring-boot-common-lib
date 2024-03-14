@@ -12,7 +12,7 @@ public class MailServiceImpl {
 	@Autowired
 	JavaMailSender javaMailSender;
 	
-	@Value("${spring.mail.username}")
+	@Value("${spring.mail.username:dummy}")
 	private String fromMail;
 	
 	public void sendMail(String mail, MailStructure mailStructure) {

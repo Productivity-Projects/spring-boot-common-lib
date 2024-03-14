@@ -8,15 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import io.minio.ListObjectsArgs;
 import io.minio.MinioClient;
 import io.minio.ObjectWriteResponse;
 import io.minio.PutObjectArgs;
+import io.minio.Result;
 import io.minio.errors.ErrorResponseException;
 import io.minio.errors.InsufficientDataException;
 import io.minio.errors.InternalException;
 import io.minio.errors.InvalidResponseException;
 import io.minio.errors.ServerException;
 import io.minio.errors.XmlParserException;
+import io.minio.messages.Item;
+
 
 @Service
 public class MinioClinetUtils {
@@ -42,5 +46,14 @@ public class MinioClinetUtils {
 			return false;
 		}
 	}
+
+	public Iterable<Result<Item>> listObjects(ListObjectsArgs listObjectsArgs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	
 
 }

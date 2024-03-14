@@ -1,4 +1,4 @@
-package com.springbootcommonlib.minio;
+package com.springbootcommonlib.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -10,12 +10,15 @@ import io.minio.MinioClient;
 public class MinIoConfig {
 
 
-	@Value("${minio.endpoint}")
+	@Value("${minio.endpoint:http://localhost:9000}")
 	private String endpoint;
-	@Value("${minio.accessKey}")
+	@Value("${minio.accessKey:minioadmin}")
 	private String accessKey;
-	@Value("${minio.secretKey}")
+	@Value("${minio.secretKey:minioadmin}")
 	private String secretKey;
+	
+	@Value("${minio.bucket-name}")
+	private String bucketName;
 	
 	 @Bean
 	    public MinioClient minioClient() {

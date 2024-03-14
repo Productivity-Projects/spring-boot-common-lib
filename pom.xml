@@ -59,6 +59,7 @@
 	<build>
 		<plugins>
 		</plugins>
+		<finalName>spring-lib</finalName>
 	</build>
 
 </project>
