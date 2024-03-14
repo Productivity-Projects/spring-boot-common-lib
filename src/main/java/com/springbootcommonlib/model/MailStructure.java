@@ -1,4 +1,4 @@
-package com.springbootcommonlib.mail;
+package com.springbootcommonlib.model;
 
 import lombok.Data;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.springbootcommonlib.mail;
+package com.springbootcommonlib.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -6,8 +6,11 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import com.springbootcommonlib.model.MailStructure;
+import com.springbootcommonlib.service.MailService;
+
 @Service
-public class MailServiceImpl {
+public class MailServiceImpl implements MailService {
 	
 	@Autowired
 	JavaMailSender javaMailSender;
