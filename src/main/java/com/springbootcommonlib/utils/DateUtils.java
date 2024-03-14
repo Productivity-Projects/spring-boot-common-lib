@@ -20,9 +20,7 @@ public class DateUtils {
 		try {
 			Calendar currentDate = Calendar.getInstance();
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			Date todayDate = (Date) formatter.parse(formatter.format(currentDate.getTime()));
-			
-			
+			Date todayDate = (Date) formatter.parse(formatter.format(currentDate.getTime()));	
 			
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -30,4 +28,13 @@ public class DateUtils {
 		return "satyam";
 		
 	}
+	
+	
+	public static Date getCurrentDate(String scheduledTimeTo) throws ParseException {
+		Calendar currentDate = Calendar.getInstance();
+		 Date date1=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(scheduledTimeTo);
+		return date1;
+	}
+	
+	
 }
